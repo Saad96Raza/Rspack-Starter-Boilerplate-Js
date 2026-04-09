@@ -2,7 +2,7 @@
 /**
  * fluid function
  */
-import { Fluid } from './assets/apps/extra/math'
+const { Fluid } = require("./src/apps/extra/math.js");
 const daisyui = require('daisyui')
 
 module.exports = {
@@ -10,27 +10,32 @@ module.exports = {
   theme: {
     container: {
       center: true,
+      padding: {
+        DEFAULT: '1rem',
+      },
       screens: {
         DEFAULT: '100%', 
-        xl: '1440px',    
+        md: '1440px',
+            
       },
     },
     extend: {
       fontSize: {        
-        xxl: [Fluid(4, 200)], 
-        xl: [], 
-        lg: [], 
-        md: [], 
+        xxl: [Fluid(4, 180)], 
+        xl: [Fluid(4, 70)], 
+        lg: [Fluid(2, 26)], 
+        md: [[Fluid(1, 9)]], 
         sm: [], 
-        body: [], 
+        body: [Fluid(1, 6)], 
         input: [], 
-        highlight: [], 
+        highlight: [Fluid(0.6, 8)], 
       },      
     },
   },
   plugins: [
     daisyui
   ],
+
   corePlugins: {
     preflight: true, /** Ensure it's enabled */
   },

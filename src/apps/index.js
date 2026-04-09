@@ -3,6 +3,9 @@ import Contact from './contact';
 import barba from '@barba/core';
 import GSAP from 'gsap';
 
+import _ from '../scss/main.scss'
+
+
 class App{
     constructor(){
         this.pages = {
